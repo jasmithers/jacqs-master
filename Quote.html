@@ -1,0 +1,48 @@
+<html>
+<body>
+<strong size="20"> Request a Quote!</strong>
+  <form action="/action_message.php">
+    First name:<br>
+    <input position="right" type="text" name="firstname">
+    <br>
+    Last name:<br>   <input position="right" type="text" name="lastname">
+    <br>
+    Email Address:<br><input position="right" type="text" name="email">
+
+    <input type="text" width="30" height="30" name="type">
+    Type of shoot:<br>
+    <input type="text" name="location">
+      Location:<br>
+      <input type="text" name="Questions"><br>
+    <br>
+    <strong> I just have a few quetions!</strong>
+
+    Portrait Session<input type="text" name="port"><br>
+    <br>
+    <form action="/action_message.php">
+      <input type="checkbox" name="Two"><br>2<br>
+      <input type="checkbox" name="Four"><br>4<br>
+      <input type="checkbox" name="Pets"> <br>Pets<br>
+      <input type="checkbox" name="Five"> <br>5 or more<br>
+    </form>
+    Wedding
+    <form action="/action_message.php">
+      <input type="checkbox" name="guests"> How many guests? <input type="text" name="guest"> <br>
+      <input type="checkbox" name="dates"> When?<br> <input type="date" id="myDate" value="date">
+      <script>
+function myFunction() {
+    var x = document.getElementById("myDate").value;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+      <input type="checkbox" name="budgets"> What is your budget?<br><input type="text" name="budget"> <br>
+      <input type="checkbox" name="hours"> How many hours would you want the photographer(s) for? <input type="text" name="guest"> <br>
+    </form>
+
+    Product Photography
+
+     <input type="submit" value="guests" >
+  </form>
+
+</body>
+</html>
