@@ -47,8 +47,7 @@ $('.picture').each( function() {
                 var item = {
                     src : $href,
                     w   : $width,
-                    h   : $height
-              
+                    h   : $height,
                 }
 
                 items.push(item);
