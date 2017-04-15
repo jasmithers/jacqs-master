@@ -1,6 +1,4 @@
-<html>
-<body>
-<strong size="20"> Request a Quote!</strong>
+<!-- <strong size="20"> Request a Quote!</strong>
   <form action="/action_message.php">
     First name:<br>
     <input position="right" type="text" name="firstname">
@@ -43,6 +41,4 @@ function myFunction() {
 
      <input type="submit" value="guests" >
   </form>
-
-</body>
-</html>
+-->
