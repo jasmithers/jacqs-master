@@ -74,3 +74,12 @@ $('.picture').each( function() {
     });
 
 });
+
+//THUMBNAILs
+$('figure').each( function() {
+
+var thumb = $(this).find('.thumbnail');
+var image = $(this).find('a').attr('href');
+
+$(thumb).css('background-image', 'url(' + image + ')');
+});
