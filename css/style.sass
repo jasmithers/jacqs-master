@@ -22,7 +22,9 @@ body
   margin: 0
   padding: 0
   color: $darkgrey
-
+main
+  display: flex
+  justify-content: space-around
 
 a
   color: inherit
@@ -41,7 +43,7 @@ h2
   color: $blue
   text-align: center
   font-family: $sans
-  font-size: .9rem
+  font-size: 1rem
   margin: 14px auto
   &:before, &:after
     content: ""
@@ -60,11 +62,20 @@ h3
 h4
   font-family: $handlee
 
+p
+  background-color: rgba(255, 255, 255, .6)
 
 
 
-
-
+#background
+  background-image: url('../html-includes/jacks.svg')
+  background-repeat: no-repeat
+  background-position: top right
+  transform: translateY(-70px)
+  z-index: -1
+  height: 100%
+  width: 100%
+  position: fixed
 //header
 header
   display: flex
@@ -76,6 +87,9 @@ header
 //headline and logo
 //navigation
 nav
+  background-color: rgba(255, 255, 255, .6)
+  width: 100%
+  text-align: center
   h2:hover
     color: $orange
   svg
@@ -184,7 +198,6 @@ nav
     box-shadow: 1px 1px 5px 3px $grey
     &:hover
       box-shadow: 1px 1px 6px 2px $grey
-
   img, video
     margin-top: 15px
     border: 1px solid $lightgrey
@@ -248,12 +261,7 @@ nav
 //Media Specific
 @media (max-width: 650px)
   h1
-    left: 50%
-    display: inline-block
-    position: fixed
-    top: 0
-    .therest
-      display: none
+    display: none
   .menu
     display: inline-block
     position: fixed
