@@ -1,3 +1,10 @@
+$(document).ready(function(){
+    $(window).scroll(function(){
+        backToTop();
+    })
+})
+
+
 //HTML INCLUDES
 $.ajaxPrefilter( function (options) {
   if (options.crossDomain && jQuery.support.cors) {
@@ -83,3 +90,16 @@ var image = $(this).find('a').attr('href');
 
 $(thumb).css('background-image', 'url(' + image + ')');
 });
+//BACK TO top
+function backToTop() {
+  var headerHeight = 240;
+  var scrollFromTop = $(window).scrollTop();
+
+  if ( headerHeight <= scrollFromTop ) { //if window is lower than headeHeight
+    $('.back-to-top-button').addClass('back-to-top');
+  } else {
+    $('.back-to-top-button').removeClass('back-to-top');
+  }
+}
+
+//4. when clicked, scroll to top.
