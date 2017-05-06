@@ -217,6 +217,7 @@ nav
   img, video
     margin-top: 15px
     border: 1px solid $lightgrey
+
 //class of gallery for gallery pages
 .thumbnail
   width: 100%
@@ -241,6 +242,13 @@ nav
   margin: auto auto
   text-align: center
   margin-top: 50px
+  .picture
+    transform: translateX(0)
+    transition: transform .76s ease-out, opacity 0.4s ease-out .27s
+    opacity: 1
+  .unseen-picture
+    transform: translateX(-30%)
+    opacity: 0
   .large-unit
     display: inline-block
     padding: 0
@@ -277,6 +285,7 @@ nav
       &:nth-child(5)
         width: 243px
         height: 200px
+
 //Media Specific
 @media (max-width: 650px)
   h1

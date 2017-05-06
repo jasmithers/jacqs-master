@@ -1,7 +1,10 @@
 $(document).ready(function(){
     $(window).scroll(function(){
         backToTop();
-    })
+        galleryAnimate();
+    });
+    scrollToTop();
+
 })
 
 
@@ -103,3 +106,24 @@ function backToTop() {
 }
 
 //4. when clicked, scroll to top.
+function scrollToTop() {
+
+}
+
+
+//animate in the photos up scrolling to them
+function galleryAnimate() {
+
+  $('.picture').each(function ( index ) {
+    var scrollFromTop = $(window).scrollTop();
+    var howOffset = $( this ).offset().top;
+    if ( scrollFromTop >= ( howOffset - 350) ) {
+      //.picture has come into view
+      $( this ).removeClass('unseen-picture');
+    } else {
+      $( this ).addClass('unseen-picture');
+    }
+  });
+
+
+}
