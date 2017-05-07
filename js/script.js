@@ -117,7 +117,7 @@ function galleryAnimate() {
   $('.picture').each(function ( index ) {
     var scrollFromTop = $(window).scrollTop();
     var howOffset = $( this ).offset().top;
-    if ( scrollFromTop >= ( howOffset - 350) ) {
+    if ( scrollFromTop >= ( howOffset - 380) ) {
       //.picture has come into view
       $( this ).removeClass('unseen-picture');
     } else {

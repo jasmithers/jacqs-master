@@ -1,3 +1,7 @@
+@font-face
+  font-family: Morsal
+  src: url('../Morsal.ttf')
+
 //variables
 $orange: #ed7d3a
 $blue: #4f839d
@@ -8,7 +12,7 @@ $grey: #919191
 
 
 $sans: 'Roboto', sans
-$title: 'Lemonada', cursive
+$title: 'Morsal', cursive
 $handlee: 'Handlee',cursive
 
 //the background effect
@@ -20,7 +24,7 @@ $handlee: 'Handlee',cursive
   background-image: url('../html-includes/jacks1.svg')
   background-repeat: no-repeat
   background-position: top right
-  transform: translateY(-170px)
+  transform: translateY(-140px)
   z-index: -1
   height: 100%
   width: 100%
@@ -288,7 +292,7 @@ nav
 
 //Media Specific
 @media (max-width: 650px)
-  h1
+  h1 span
     display: none
   .menu
     display: inline-block
@@ -304,7 +308,8 @@ nav
     background-color: white
   main
     flex-flow: row
-
+  #background
+    transform: translateY(60px)
 @media (min-width: 1200px)
   #gallery
     max-width: 690px
