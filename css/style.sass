@@ -81,9 +81,9 @@ h3
 h4
   //gallery titles and bio name
   font-size: 2rem
-  color: $orange
+  color: darken($orange, 10%)
   font-family: $title
-  font-variant: small-caps
+  text-transform: capitalize
 
 
 //buttons
@@ -108,7 +108,7 @@ header
   justify-content: space-around
   align-items: center
   flex-flow: column-reverse
-  margin: 0 20px
+  margin: 0 0px
 
 //headline and logo
 //navigation
@@ -118,7 +118,7 @@ nav
   text-align: center
   margin: 0
   h2:hover
-    color: $orange
+    color: darken($green, 15%)
   svg
     fill: $blue
     margin: 0 5px
@@ -126,7 +126,7 @@ nav
     height: 1rem
     width: 1rem
     &:hover
-      fill: $orange
+      fill: darken($green, 15%)
   .icon:after
     content: ""
     height: .6rem
@@ -155,18 +155,25 @@ nav
   flex-flow: column
   position: fixed
   z-index: 8
-  width: 290px
+  width: 310px
   align-items: stretch
   top: 100px
   margin: 0 auto
   border-radius: 6px
+
   h2
     font-size: 1.7rem
+    font-family: $title
     width: 100%
     text-shadow: 1px 1px 3px white
+    &:before, &:after
+      width: 0
+      height: 0
 
+  a:nth-child(6)
+    order: 2
   svg
-    margin: 30px
+    margin: 20px
     z-index: 10
     width: 60px
     height: 1.9rem
@@ -175,7 +182,9 @@ nav
       fill: white
       z-index: 1
       position: absolute
-
+  .icon::after
+    width: 0 !important
+    height: 0 !important
 
 
 
@@ -214,11 +223,12 @@ nav
   width: 225px
   height: 225px
 .jacq-quote
-  background-color: $lightgrey
+  background-color: rgba(255,255,255,0.65)
   color: darken($blue, 18%)
   font-family: $sans
+  border-radius: 6px
   margin: 30px
-  padding: 10px
+  padding: 20px
 .bio
   margin: 30px auto 50px
   width: 90%
