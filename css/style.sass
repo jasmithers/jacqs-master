@@ -10,6 +10,10 @@ $darkgrey: #262626
 $lightgrey: #d6d6d6
 $grey: #919191
 
+$desaturate: desaturate($orange, 55%)
+$main: lighten($desaturate, 35%)
+$oj: rgba(211, 148, 65, .3)
+
 
 $sans: 'Roboto', sans
 $title: 'Morsal', cursive
@@ -40,7 +44,8 @@ body
 main
   display: flex
   justify-content: space-around
-  background-color: rgba(217, 103, 0, .3)
+  background-color: $main
+  margin: 0
 a
   color: inherit
   text-decoration: none
@@ -56,6 +61,8 @@ h1
   white-space: nowrap
   height: 300px
   margin: 70px 0
+  .dash-special
+    letter-spacing: .17em
 h2
   display: inline-block
   padding: 3px 7px
@@ -84,7 +91,10 @@ h4
   color: darken($orange, 10%)
   font-family: $title
   text-transform: capitalize
-
+h5
+  //footer title
+  color: darken($blue, 15%)
+  display: inline-block
 
 //buttons
 .back-to-top-button
@@ -96,6 +106,7 @@ h4
   bottom: 0
   right: 30px
   padding: 10px
+  z-index: 100
   border-radius: 6px 0 6px 0
   background-color: rgba(255, 255, 255, .6)
   color: black
@@ -112,13 +123,17 @@ header
 
 //headline and logo
 //navigation
+
 nav
-  background-color:  rgba(217, 103, 0, .3)
+  background-color:  $oj
   width: 100%
   text-align: center
   margin: 0
+  position: relative
+
+
   h2:hover
-    color: darken($green, 15%)
+    color: darken($blue, 15%)
   svg
     fill: $blue
     margin: 0 5px
@@ -126,7 +141,7 @@ nav
     height: 1rem
     width: 1rem
     &:hover
-      fill: darken($green, 15%)
+      fill: darken($blue, 15%)
   .icon:after
     content: ""
     height: .6rem
@@ -149,6 +164,11 @@ nav
     width: 2rem
     vertical-align: middle
     fill: $blue
+@keyframes mobile-menu
+  0%
+    transform: translateY(-100%)
+  100%
+    transform: translateY(0)
 .mobile
   background-color: $lightgrey
   display: inline-block
@@ -160,6 +180,8 @@ nav
   top: 100px
   margin: 0 auto
   border-radius: 6px
+  animation: mobile-menu 1s
+
 
   h2
     font-size: 1.7rem
@@ -239,7 +261,7 @@ nav
   flex-wrap: wrap
   justify-content: space-around
 #gallery
-  margin: 15px 0
+  margin: 15px auto
   display: flex
   flex-wrap: wrap
   align-items: center
@@ -259,6 +281,8 @@ nav
   img, video
     margin-top: 15px
     border: 1px solid $lightgrey
+
+
 
 //class of gallery for gallery pages
 .thumbnail
@@ -323,6 +347,32 @@ nav
       &:nth-child(5)
         width: 243px
         height: 200px
+//footer
+footer
+  align-items: baseline
+  background-color: $main
+  margin: 0
+  position: relative
+  padding: 20px
+  text-transform: capitalize
+  a:hover
+    color: $blue
+  div
+    position: absolute
+    bottom: 20px
+    left: 140px
+    margin: 0
+    padding: 0
+  .window
+    position: static
+    height: 110px
+    width: 110px
+    border-radius: 50%
+    background:
+      color: $oj
+      image: url('../images/Berrygood.png')
+      position: right bottom
+      attachment: fixed
 
 //Media Specific
 @media (max-width: 650px)
@@ -345,6 +395,14 @@ nav
     width: 100%
   #background
     transform: translateY(60px)
+  footer
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    div
+      position: static
+      margin: 10px
 @media (min-width: 1200px)
   #gallery
     max-width: 690px

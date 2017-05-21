@@ -4,7 +4,6 @@ $(document).ready(function(){
         galleryAnimate();
     });
     scrollToTop();
-
 })
 
 
@@ -38,10 +37,13 @@ $.get(
       $(div).html(response).css('position', 'absolute');
 });
 
-//
+// MOBILE MENU
 $(document).on('click', '.menu', function() {
   $('nav').toggleClass('mobile');
+
 });
+
+
 
 //PHOTOSWIPE
 $('.picture').each( function() {
@@ -107,13 +109,22 @@ function backToTop() {
 
 //4. when clicked, scroll to top.
 function scrollToTop() {
-
+  $("a[href='#top']").click(function() {
+  $("html, body").animate({ scrollTop: 0 }, "slow");
+  return false;
+});
 }
+//DISABLE RIGHT CLICK
+//$(document).each(function() {
+//  $(this)[0].oncontextmenu = function() {
+//  alert('Images are available on request. Please contact me.');
+//  return false;
+//  };
+//});
 
 
 //animate in the photos up scrolling to them
 function galleryAnimate() {
-
   $('.picture').each(function ( index ) {
     var scrollFromTop = $(window).scrollTop();
     var howOffset = $( this ).offset().top;
@@ -124,6 +135,4 @@ function galleryAnimate() {
       $( this ).addClass('unseen-picture');
     }
   });
-
-
 }
