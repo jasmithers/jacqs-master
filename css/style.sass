@@ -25,13 +25,13 @@ $handlee: 'Handlee',cursive
   display: inline-block
   position: fixed
   overflow: hidden
-  background-image: url('../html-includes/jacks1.svg')
+  background-image: url('../images/jacks/jacks.svg')
   background-repeat: no-repeat
-  background-position: top right
-  transform: translateY(-140px)
+  background-position: top left
+  transform: translateY(100px)
   z-index: -1
-  height: 100%
-  width: 100%
+  height: 70%
+  width: 70%
   position: fixed
 
 //resets/baselines/headers
@@ -358,21 +358,22 @@ footer
   a:hover
     color: $blue
   div
-    position: absolute
+    display: inline-block
+    vertical-align: middle
     bottom: 20px
     left: 140px
     margin: 0
     padding: 0
   .window
-    position: static
-    height: 110px
-    width: 110px
+    width: 100px
+    height: 100px
     border-radius: 50%
     background:
       color: $oj
-      image: url('../images/Berrygood.png')
-      position: right bottom
-      attachment: fixed
+      image: url('../images/jacks/singlejack.png')
+      repeat: no-repeat
+      size: cover
+    box-shadow: 0px 0px 1px darken($orange, 30%)
 
 //Media Specific
 @media (max-width: 650px)
@@ -394,7 +395,7 @@ footer
     flex-flow: column
     width: 100%
   #background
-    transform: translateY(60px)
+    transform: translateY(100px)
   footer
     display: flex
     flex-flow: column
