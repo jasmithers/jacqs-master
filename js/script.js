@@ -7,40 +7,19 @@ $(document).ready(function(){
 })
 
 
-//HTML INCLUDES
-$.ajaxPrefilter( function (options) {
-  if (options.crossDomain && jQuery.support.cors) {
-    var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
-    options.url = http + '//cors-anywhere.herokuapp.com/' + options.url;
-    //options.url = "http://cors.corsproxy.io/url=" + options.url;
-  }
-});
-$.get(
-    'http://jacqsstudio.ca/html-includes/header.html',
-    function (response) {
-      var header = document.createElement('header');
-      $('main').before(header);
-      $(header).html(response);
-});
-$.get(
-    'http://jacqsstudio.ca/html-includes/head.html',
-    function (response) {
-      var head = document.getElementsByTagName('head')
-      $('head').append(head);
-      $(head).html(response);
-});
-$.get(
-    'http://jacqsstudio.ca/html-includes/icons.html',
-    function (response) {
-      var div = document.createElement('div')
-      document.body.prepend(div);
-      $(div).html(response).css('position', 'absolute');
-});
 
 // MOBILE MENU
 $(document).on('click', '.menu', function() {
-  $('nav').toggleClass('mobile');
+    console.log("hi");
+    $('nav').addClass("mobile");
 });
+
+$(document).on('click', document, function(e){
+  if (!$(e.target).is('.menu')&&!$(e.target).is('nav')) {
+    $('nav').removeClass('mobile');
+  }
+});
+
 
 
 
