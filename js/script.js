@@ -40,7 +40,6 @@ $.get(
 // MOBILE MENU
 $(document).on('click', '.menu', function() {
   $('nav').toggleClass('mobile');
-
 });
 
 

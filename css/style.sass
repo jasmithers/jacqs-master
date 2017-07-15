@@ -95,6 +95,9 @@ h5
   //footer title
   color: darken($blue, 15%)
   display: inline-block
+h6
+  //titles on gallery descriptions
+  color: darken($grey, 25%)
 
 //buttons
 .back-to-top-button
@@ -120,7 +123,19 @@ header
   align-items: center
   flex-flow: column-reverse
   margin: 0 0px
-
+.close-button
+  border-radius: 50%
+  position: absolute
+  height: 35px
+  width: 35px
+  right: 0
+  top: -20px
+  margin: 0
+  border: 2px solid $orange
+  background-color: white
+  p
+    display: inline-block
+    text-align: center
 //headline and logo
 //navigation
 
@@ -373,7 +388,6 @@ footer
       image: url('../images/jacks/singlejack.png')
       repeat: no-repeat
       size: cover
-    box-shadow: 0px 0px 1px darken($orange, 30%)
 
 //Media Specific
 @media (max-width: 650px)
