@@ -1,6 +1,6 @@
 @font-face
   font-family: Morsal
-  src: url('../Morsal.ttf')
+  src: url('http://jacqsstudio.ca/Morsal.ttf')
 
 //variables
 $orange: #ed7d3a
@@ -24,10 +24,12 @@ $handlee: 'Handlee',cursive
 #background
   display: inline-block
   position: fixed
+  top: 50px
+  left: 50px
   overflow: hidden
-  background-image: url('../jacks1.svg')
+  background-image: url('http://jacqsstudio.ca/jacks1.svg')
   background-repeat: no-repeat
-  background-position: top left
+  background-position: top right
   z-index: -1
   height: 70%
   width: 70%
@@ -97,6 +99,8 @@ h5
 h6
   //titles on gallery descriptions
   color: darken($grey, 25%)
+  margin: 1em
+  font-size: 1.3rem
 
 //buttons
 .back-to-top-button
@@ -244,6 +248,8 @@ nav
   flex-wrap: no-wrap
   justify-content: center
   align-items: center
+  p
+    line-height: 150%
   h4
     width: 100%
     text-align: center
@@ -253,7 +259,7 @@ nav
     width: 5em
     float: right
 .jacq-self
-  background-image: url('../images/jacqs-face.jpeg')
+  background-image: url('http://jacqsstudio.ca/images/jacqs-face.jpeg')
   background-size: cover
   background-repeat: no-repeat
   width: 225px
@@ -396,7 +402,7 @@ footer
     border-radius: 50%
     background:
       color: $oj
-      image: url('../images/jacks/singlejack.png')
+      image: url('http://jacqsstudio.ca/images/jacks/singlejack.png')
       repeat: no-repeat
       size: cover
 
